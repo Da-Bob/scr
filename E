@@ -28,7 +28,7 @@ esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
 
 game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
     for i,v in pairs (game:GetService("Players"):GetPlayers()) do
-        if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then -- craeting checks for team check, local player etc
+        if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("NikuEsp")==nil and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then -- craeting checks for team check, local player etc
             esp.Text = "{"..v.Name.."}"
             gui:Clone().Parent = v.Character.Head
     end
